@@ -1,0 +1,26 @@
+# --- OS noise ---
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
+
+# --- editors ---
+.vscode/
+.idea/
+*.swp
+*~
+
+# --- if tooling is ever added ---
+node_modules/
+dist/
+.cache/
+*.log
+
+# --- source material that should NOT be published ---
+# Raw, un-anonymised dashboard exports and client .pbix files must never
+# be committed to a public repository.
+*.pbix
+*.pbit
+raw/
+originals/

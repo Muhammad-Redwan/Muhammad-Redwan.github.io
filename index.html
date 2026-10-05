@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muhammad Radwan — Database &amp; Power BI Developer</title>
+<meta name="description" content="Database and Power BI developer with 5+ years building SQL Server data models, ETL pipelines and executive dashboards for enterprises operating across 70+ countries.">
+<meta name="author" content="Muhammad Radwan">
+<!-- ============================================================
+     AFTER DEPLOYING: replace SITE-URL-HERE below with your real
+     site address (e.g. https://muhammad-radwan.netlify.app or
+     https://muhammadradwan.com). Social previews on LinkedIn and
+     WhatsApp need the FULL url — a relative path will not work.
+     There are 4 places: canonical, og:image, og:url, twitter:image.
+     ============================================================ -->
+<link rel="canonical" href="SITE-URL-HERE/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Muhammad Radwan — Database &amp; Power BI Developer">
+<meta property="og:description" content="SQL Server data models, ETL pipelines and Power BI dashboards that turn complex, multi-source data into decisions leaders can act on.">
+<meta property="og:image" content="SITE-URL-HERE/assets/og-image.png">
+<meta property="og:url" content="SITE-URL-HERE/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Muhammad Radwan — Database &amp; Power BI Developer">
+<meta name="twitter:description" content="SQL Server data models, ETL pipelines and Power BI dashboards that turn complex, multi-source data into decisions leaders can act on.">
+<meta name="twitter:image" content="SITE-URL-HERE/assets/og-image.png">
+<meta name="theme-color" content="#12151c">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%2312151c'/><rect x='22' y='52' width='14' height='28' rx='3' fill='%235eead4'/><rect x='43' y='36' width='14' height='44' rx='3' fill='%235eead4'/><rect x='64' y='20' width='14' height='60' rx='3' fill='%235eead4'/></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#12151c; --deep:#0e1117; --panel:#171b24;
+    --line:#232833; --line2:#2f3644;
+    --fg:#e6e9ef; --muted:#9aa3b2; --dim:#8b93a3; --faint:#5a6272;
+    --accent:#5eead4;
+    --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+    --sans:'Space Grotesk',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    --wrap:1120px; --gut:40px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--fg);font-family:var(--sans);
+       -webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding-left:var(--gut);padding-right:var(--gut)}
+  .mono{font-family:var(--mono)}
+
+  /* ---------- nav ---------- */
+  .nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);
+       background:rgba(18,21,28,.82);border-bottom:1px solid var(--line)}
+  .nav .wrap{display:flex;justify-content:space-between;align-items:center;
+             padding-top:18px;padding-bottom:18px;gap:20px}
+  .brand{font-family:var(--mono);font-weight:500;font-size:16px;color:var(--accent);white-space:nowrap}
+  .navlinks{display:flex;gap:30px;font-family:var(--mono);font-size:14px}
+  .navlinks a{color:var(--dim);transition:color .18s}
+  .navlinks a:hover,.navlinks a.on{color:var(--accent)}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;overflow:hidden}
+  .grid-bg{position:absolute;inset:0;pointer-events:none;opacity:.55;
+    background-image:linear-gradient(#1a1e27 1px,transparent 1px),
+                     linear-gradient(90deg,#1a1e27 1px,transparent 1px);
+    background-size:44px 44px;
+    -webkit-mask-image:radial-gradient(ellipse 80% 70% at 30% 20%,#000 40%,transparent 100%);
+            mask-image:radial-gradient(ellipse 80% 70% at 30% 20%,#000 40%,transparent 100%)}
+  .hero .wrap{position:relative;padding-top:120px;padding-bottom:100px}
+  .eyebrow{font-family:var(--mono);font-size:14px;letter-spacing:.12em;color:var(--accent)}
+  h1{font-weight:700;font-size:clamp(42px,8.4vw,88px);line-height:.98;
+     letter-spacing:-.03em;margin:26px 0 0;max-width:900px}
+  .lede{font-size:clamp(17px,2.2vw,21px);line-height:1.6;color:var(--muted);
+        max-width:640px;margin-top:30px}
+  .cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+  .btn{font-family:var(--mono);font-size:14px;padding:14px 26px;transition:.18s;white-space:nowrap}
+  .btn-a{background:var(--accent);color:#0e1117;font-weight:600}
+  .btn-a:hover{filter:brightness(1.08)}
+  .btn-b{border:1px solid var(--line2);color:var(--fg);font-weight:500}
+  .btn-b:hover{border-color:var(--accent);color:var(--accent)}
+  .stats{display:flex;flex-wrap:wrap;gap:56px;margin-top:68px}
+  .stat b{display:block;font-size:clamp(26px,4.4vw,34px);font-weight:700;color:var(--accent)}
+  .stat span{display:block;font-family:var(--mono);font-size:13px;color:var(--dim);margin-top:4px}
+
+  /* ---------- section head ---------- */
+  .shead{display:flex;justify-content:space-between;align-items:baseline;
+         border-top:1px solid var(--line);padding-top:28px;margin-bottom:34px;gap:16px}
+  h2.label{margin:0;font-family:var(--mono);font-size:15px;letter-spacing:.1em;
+           color:var(--dim);font-weight:500}
+  .count{font-family:var(--mono);font-size:13px;color:var(--faint)}
+
+  /* ---------- work ---------- */
+  #work{padding-top:40px;padding-bottom:90px}
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .card{background:var(--panel);border:1px solid var(--line);overflow:hidden;
+        display:flex;flex-direction:column;transition:border-color .2s}
+  .card:hover{border-color:var(--line2)}
+  .card.feature{grid-column:1 / -1}
+  .shot{display:block;background:var(--deep);border-bottom:1px solid var(--line);overflow:hidden}
+  .shot img{width:100%;height:auto}
+  .cbody{padding:24px}
+  .ctop{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+  .ctop h3{margin:0;font-size:20px;font-weight:600}
+  .tag{font-family:var(--mono);font-size:12px;color:var(--accent);white-space:nowrap}
+  .cbody p{margin:12px 0 0;font-size:15px;color:var(--muted);line-height:1.6}
+  .note{margin-top:28px;font-family:var(--mono);font-size:12.5px;color:var(--faint);line-height:1.7}
+
+  /* ---------- about / experience bands ---------- */
+  .band{background:var(--deep);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .split{display:grid;grid-template-columns:300px 1fr;gap:64px;align-items:start;
+         padding-top:80px;padding-bottom:80px}
+  .big{margin:0;font-size:clamp(20px,3vw,26px);line-height:1.5;font-weight:500;letter-spacing:-.01em}
+  .body-copy{margin-top:24px;font-size:17px;line-height:1.7;color:var(--muted)}
+
+  /* ---------- skills ---------- */
+  #skills{padding-top:80px;padding-bottom:80px}
+  .skillgrid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .skillbox{border:1px solid var(--line);padding:28px}
+  .skillbox h3{font-family:var(--mono);font-size:12px;color:var(--accent);
+               letter-spacing:.08em;margin-bottom:18px;font-weight:500}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chips span{border:1px solid var(--line2);padding:7px 13px;font-size:14px;color:#cdd3dd}
+
+  /* ---------- experience ---------- */
+  .role{display:grid;grid-template-columns:150px 1fr;gap:24px;
+        padding:26px 0;border-bottom:1px solid var(--line)}
+  .role:last-child{border-bottom:0}
+  .when{font-family:var(--mono);font-size:13px;color:var(--accent);padding-top:4px}
+  .role h3{margin:0;font-size:20px;font-weight:600}
+  .org{font-size:14px;color:var(--dim);margin:4px 0 10px}
+  .role p{margin:0;font-size:15px;color:var(--muted);line-height:1.6}
+
+  /* ---------- contact ---------- */
+  #contact{border-top:1px solid var(--line)}
+  #contact .wrap{padding-top:100px;padding-bottom:110px}
+  h2.shout{font-weight:700;font-size:clamp(32px,6vw,60px);line-height:1.02;
+           letter-spacing:-.03em;margin:22px 0 0;max-width:760px}
+  .pitch{font-size:clamp(16px,2.2vw,19px);color:var(--muted);margin:24px 0 44px;
+         max-width:520px;line-height:1.6}
+  .cards-contact{display:flex;flex-wrap:wrap;gap:16px}
+  .ccard{display:flex;flex-direction:column;gap:6px;border:1px solid var(--line);
+         padding:22px 28px;min-width:240px;flex:1 1 240px;transition:border-color .2s}
+  .ccard:hover{border-color:var(--accent)}
+  .ccard b{font-family:var(--mono);font-size:12px;color:var(--dim);font-weight:500}
+  .ccard span{font-size:17px;color:var(--fg);word-break:break-word}
+  footer{border-top:1px solid var(--line)}
+  footer .wrap{padding-top:24px;padding-bottom:24px;display:flex;
+               justify-content:space-between;align-items:center;gap:16px;
+               font-family:var(--mono);font-size:12px;color:var(--faint)}
+
+  /* ================= responsive ================= */
+  @media (max-width:980px){
+    :root{--gut:28px}
+    .split{grid-template-columns:1fr;gap:28px;padding-top:64px;padding-bottom:64px}
+    .cards{grid-template-columns:1fr}
+    .card.feature{grid-column:auto}
+    .skillgrid{grid-template-columns:1fr}
+    .stats{gap:36px}
+  }
+  @media (max-width:720px){
+    :root{--gut:16px}
+    .hero .wrap{padding-top:72px;padding-bottom:64px}
+    .navlinks{display:none}
+    #work{padding-bottom:64px}
+    #skills{padding-top:56px;padding-bottom:56px}
+    #contact .wrap{padding-top:64px;padding-bottom:72px}
+    .role{grid-template-columns:1fr;gap:8px}
+    .when{padding-top:0}
+    .cbody,.skillbox{padding:20px}
+    .ccard{padding:18px 20px;min-width:0}
+    .stats{gap:28px 40px;margin-top:48px}
+    footer .wrap{flex-direction:column;align-items:flex-start;gap:6px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *{transition:none!important}
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">~/muhammad_radwan</a>
+    <div class="navlinks">
+      <a href="#work" data-spy="work">work</a>
+      <a href="#about" data-spy="about">about</a>
+      <a href="#skills" data-spy="skills">skills</a>
+      <a href="#experience" data-spy="experience">experience</a>
+      <a href="#contact" data-spy="contact">contact</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero" id="top" data-sec="work">
+  <div class="grid-bg"></div>
+  <div class="wrap">
+    <span class="eyebrow">// DB &amp; POWER BI DEVELOPER</span>
+    <h1>Data in.<br>Decisions <span style="color:var(--accent)">out.</span></h1>
+    <p class="lede">I’m Muhammad Radwan — a Database &amp; Power BI developer with 5+ years building SQL Server data models, ETL pipelines, and Power BI dashboards that turn complex, multi-source data into decisions leaders can act on.</p>
+    <div class="cta">
+      <a class="btn btn-a" href="#work">View work →</a>
+      <a class="btn btn-b" href="#contact">Get in touch</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>5+ yrs</b><span>SQL Server &amp; Power BI</span></div>
+      <div class="stat"><b>70+</b><span>countries supported</span></div>
+      <div class="stat"><b>C-suite</b><span>dashboards for CEO/CFO</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="wrap">
+  <div class="shead">
+    <h2 class="label">SELECTED_WORK</h2>
+    <span class="count">(03)</span>
+  </div>
+
+  <div class="cards">
+    <article class="card feature">
+      <a class="shot" href="assets/collection.webp" target="_blank" rel="noopener" aria-label="Open full-size collections dashboard">
+        <img src="assets/collection.webp" width="1400" height="773"
+             alt="Collections dashboard showing receipts, invoicing, outstanding balances and a monthly collection trend">
+      </a>
+      <div class="cbody">
+        <div class="ctop">
+          <h3>Collections &amp; Receivables Control</h3>
+          <span class="tag">Power BI · DAX</span>
+        </div>
+        <p>Month-to-date collections, invoicing and net outstanding in a single executive view — with aging splits, charge-code breakdowns and an invoices-versus-receipts trend that shows finance exactly where cash is stalling.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="shot" href="assets/leasing.webp" target="_blank" rel="noopener" aria-label="Open full-size leasing dashboard">
+        <img src="assets/leasing.webp" width="1400" height="783" loading="lazy"
+             alt="Leasing performance dashboard with lead funnel, MOU pipeline and specialist rankings">
+      </a>
+      <div class="cbody">
+        <div class="ctop">
+          <h3>Leasing Performance &amp; Pipeline</h3>
+          <span class="tag">Power BI · Fabric</span>
+        </div>
+        <p>Lead-to-contract funnel across the leasing pipeline, with MOU and contract stages, per-specialist performance ranking, and new-lease value tracked month over month.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="shot" href="assets/commercial.webp" target="_blank" rel="noopener" aria-label="Open full-size commercial dashboard">
+        <img src="assets/commercial.webp" width="1400" height="791" loading="lazy"
+             alt="Commercial dashboard showing occupancy, revenue, utilities and budget versus actual projection">
+      </a>
+      <div class="cbody">
+        <div class="ctop">
+          <h3>Commercial Portfolio Reporting</h3>
+          <span class="tag">SQL · ETL · SSRS</span>
+        </div>
+        <p>Occupancy, rent and service income, utility billing and renewals in one commercial overview — including an actual-versus-budget projection that surfaces variance before it reaches the P&amp;L.</p>
+      </div>
+    </article>
+  </div>
+
+  <p class="note">// All figures and identifiers shown above are anonymised. Client names, staff names and<br>
+  &nbsp;&nbsp; organisational branding have been replaced; dashboard structure and logic are my own work.</p>
+</section>
+
+<section id="about" class="band" data-sec="about">
+  <div class="wrap split">
+    <h2 class="label">ABOUT</h2>
+    <div>
+      <p class="big">Results-driven Database and Power BI developer who turns complex, multi-source data into insight leaders can act on.</p>
+      <p class="body-copy">Over 5+ years I’ve built, optimized, and performance-tuned SQL Server databases, delivered interactive Power BI and SSRS dashboards, and led ETL-driven migrations across multiple source systems. I’ve supported enterprise BI and financial reporting for organizations operating in 70+ countries — from global logistics at Aramex to cloud-ERP real-estate transformation in the Gulf.</p>
+      <p class="body-copy">Comfortable across requirements gathering, stakeholder communication, and process documentation in Agile teams. Available for full-time roles and freelance Power BI &amp; data-modeling projects.</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="wrap" data-sec="skills">
+  <h2 class="label" style="margin-bottom:40px">SKILLS</h2>
+  <div class="skillgrid">
+    <div class="skillbox">
+      <h3>SQL &amp; DATABASE</h3>
+      <div class="chips">
+        <span>T-SQL</span><span>SQL Server</span><span>Query Optimization</span>
+        <span>Performance Tuning</span><span>Stored Procedures</span><span>Views &amp; Functions</span>
+        <span>Data Warehousing</span><span>SSAS</span>
+      </div>
+    </div>
+    <div class="skillbox">
+      <h3>DATA VISUALIZATION</h3>
+      <div class="chips">
+        <span>Power BI</span><span>DAX</span><span>Power Query</span><span>SSRS</span>
+        <span>Microsoft Fabric</span><span>R</span><span>Python</span>
+      </div>
+    </div>
+    <div class="skillbox">
+      <h3>DATA MANAGEMENT &amp; TOOLS</h3>
+      <div class="chips">
+        <span>ETL</span><span>SSIS</span><span>Data Modeling</span><span>Data Validation</span>
+        <span>Data Governance</span><span>Azure Data Services</span><span>Docker</span><span>Git</span>
+      </div>
+    </div>
+    <div class="skillbox">
+      <h3>BUSINESS &amp; DELIVERY</h3>
+      <div class="chips">
+        <span>Requirements Gathering</span><span>Stakeholder Engagement</span>
+        <span>Process Documentation</span><span>Agile / Scrum</span>
+        <span>Cross-functional Collaboration</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="band" data-sec="experience" style="border-bottom:0">
+  <div class="wrap split">
+    <div>
+      <h2 class="label" style="margin-bottom:20px">EXPERIENCE</h2>
+      <a class="btn btn-b" style="display:inline-block;padding:12px 20px;font-size:13px"
+         href="Muhammad-Radwan-CV.pdf" download>Download résumé ↓</a>
+    </div>
+    <div>
+      <div class="role">
+        <span class="when">2026 — Now</span>
+        <div>
+          <h3>Senior Power BI Developer <span style="color:var(--dim);font-weight:400">(Freelance)</span></h3>
+          <div class="org">Othaim Group</div>
+          <p>End-to-end BI on Power BI &amp; Microsoft Fabric for CEO, CFO, and senior directors — portfolio dashboards for revenue, collections, sales performance, and forecasting, plus optimized fact/dimension/bridge models.</p>
+        </div>
+      </div>
+      <div class="role">
+        <span class="when">2024 — Now</span>
+        <div>
+          <h3>Senior SQL &amp; Power BI Developer</h3>
+          <div class="org">Cloudy PropTech</div>
+          <p>Executive, financial, and accounting dashboards on Power BI &amp; SSRS. Built ERP-based financial reporting (revenue, forecasting, P&amp;L, cash flow) and scalable ETL pipelines with reusable stored procedures for Gulf-area real-estate organizations.</p>
+        </div>
+      </div>
+      <div class="role">
+        <span class="when">2023 — 2024</span>
+        <div>
+          <h3>Global BI &amp; SQL Developer</h3>
+          <div class="org">Aramex International</div>
+          <p>Complex SQL, optimized large-scale databases, and ETL-driven migrations. Delivered dynamic Power BI &amp; SSRS reports and resolved integration issues raised by stakeholders across 70+ countries.</p>
+        </div>
+      </div>
+      <div class="role">
+        <span class="when">2020 — 2023</span>
+        <div>
+          <h3>Expert Resolution Specialist</h3>
+          <div class="org">Vodafone</div>
+          <p>Data analysis to surface trends and improve customer experience, report/process automation with SQL and Excel, and technical support for enterprise systems.</p>
+        </div>
+      </div>
+      <div class="role">
+        <span class="when">Education</span>
+        <div>
+          <h3>BSc, Mathematics &amp; Computer Science</h3>
+          <div class="org">Ain Shams University · 2018</div>
+          <h3 style="margin-top:14px">Business Intelligence Track</h3>
+          <div class="org" style="margin-bottom:0">Information Technology Institute (ITI) · 2021</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" data-sec="contact">
+  <div class="wrap">
+    <span class="eyebrow">// LET’S TALK</span>
+    <h2 class="shout">Got data that should be telling you more?</h2>
+    <p class="pitch">Open to full-time roles and freelance Power BI &amp; data projects. Send over what you’re working on.</p>
+    <div class="cards-contact">
+      <a class="ccard" href="mailto:MRedwan214@gmail.com">
+        <b>EMAIL</b><span>MRedwan214@gmail.com</span>
+      </a>
+      <a class="ccard" href="tel:+201093391984">
+        <b>PHONE</b><span>+20 109 339 1984</span>
+      </a>
+      <a class="ccard" href="https://www.linkedin.com/in/mredwan214/" target="_blank" rel="noopener">
+        <b>LINKEDIN</b><span>/in/mredwan214</span>
+      </a>
+    </div>
+  </div>
+  <footer>
+    <div class="wrap">
+      <span>© <span id="yr">2026</span> Muhammad Radwan</span>
+      <span>Built with data &amp; care</span>
+    </div>
+  </footer>
+</section>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  var links = {};
+  document.querySelectorAll('.navlinks a').forEach(function(a){ links[a.dataset.spy] = a; });
+  var secs = document.querySelectorAll('[data-sec]');
+  if ('IntersectionObserver' in window && secs.length) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (!e.isIntersecting) return;
+        var id = e.target.dataset.sec;
+        for (var k in links) links[k].classList.toggle('on', k === id);
+      });
+    }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+    secs.forEach(function(s){ io.observe(s); });
+  }
+</script>
+</body>
+</html>
