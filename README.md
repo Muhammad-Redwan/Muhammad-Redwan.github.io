@@ -3,7 +3,7 @@
 Personal portfolio site for a **Database & Power BI Developer**: SQL Server data
 modelling, ETL pipelines, and executive dashboards.
 
-**Live:** https://SITE-URL-HERE
+**Live:** <https://muhammad-redwan.github.io>
 
 ---
 
@@ -65,10 +65,10 @@ python -m http.server 8000
 Published with **GitHub Pages** from the `main` branch
 (*Settings → Pages → Source: Deploy from a branch*).
 
-After the first deploy, replace `SITE-URL-HERE` with the live address — it
-appears in `index.html` (canonical, `og:image`, `og:url`, `twitter:image`) and
-once in this README. Social previews on LinkedIn need absolute URLs; relative
-paths will not resolve.
+The absolute URLs required for social previews (`canonical`, `og:image`,
+`og:url`, `twitter:image`) are already set in `index.html`. If the site ever
+moves, those four tags and the link at the top of this README need updating —
+LinkedIn and WhatsApp will not resolve relative paths.
 
 For a custom domain, add a `CNAME` file containing the bare domain and point
 the DNS records at GitHub Pages.
