@@ -103,6 +103,14 @@
   .cbody p{margin:12px 0 0;font-size:15px;color:var(--muted);line-height:1.6}
   .note{margin-top:28px;font-family:var(--mono);font-size:12.5px;color:var(--faint);line-height:1.7}
 
+  /* ---------- also built (added) ---------- */
+  .also{margin-top:64px}
+  .also-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px}
+  .also-item{padding:22px 0;border-bottom:1px solid var(--line);min-width:0}
+  .also-item h3{margin:0;font-size:17px;font-weight:600}
+  .also-item .tag{display:block;margin-top:6px;white-space:normal}
+  .also-item p{margin:10px 0 0;font-size:15px;color:var(--muted);line-height:1.6}
+
   /* ---------- about / experience bands ---------- */
   .band{background:var(--deep);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .split{display:grid;grid-template-columns:300px 1fr;gap:64px;align-items:start;
@@ -114,6 +122,7 @@
   #skills{padding-top:80px;padding-bottom:80px}
   .skillgrid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
   .skillbox{border:1px solid var(--line);padding:28px}
+  .skillbox.wide{grid-column:1 / -1}
   .skillbox h3{font-family:var(--mono);font-size:12px;color:var(--accent);
                letter-spacing:.08em;margin-bottom:18px;font-weight:500}
   .chips{display:flex;flex-wrap:wrap;gap:8px}
@@ -167,6 +176,7 @@
     .cbody,.skillbox{padding:20px}
     .ccard{padding:18px 20px;min-width:0}
     .stats{gap:28px 40px;margin-top:48px}
+    .also-grid{grid-template-columns:1fr}
     footer .wrap{flex-direction:column;align-items:flex-start;gap:6px}
   }
   @media (prefers-reduced-motion:reduce){
@@ -204,6 +214,7 @@
       <div class="stat"><b>5+ yrs</b><span>SQL Server &amp; Power BI</span></div>
       <div class="stat"><b>70+</b><span>countries supported</span></div>
       <div class="stat"><b>C-suite</b><span>dashboards for CEO/CFO</span></div>
+      <div class="stat"><b>Yardi</b><span>real-estate ERP reporting</span></div>
     </div>
   </div>
 </section>
@@ -274,6 +285,45 @@
 
   <p class="note">// All figures and identifiers shown above are anonymised. Client names, staff names and<br>
   &nbsp;&nbsp; organisational branding have been replaced; dashboard structure and logic are my own work.</p>
+
+  <div class="also">
+    <div class="shead">
+      <h2 class="label">ALSO_BUILT</h2>
+      <span class="count">(06)</span>
+    </div>
+    <div class="also-grid">
+      <div class="also-item">
+        <h3>Yardi Lease Management Reporting</h3>
+        <span class="tag">T-SQL · Yardi Voyager</span>
+        <p>SQL reporting on lease financials, occupancy, aging and collections, plus LAF workflow status tracking across approval steps.</p>
+      </div>
+      <div class="also-item">
+        <h3>ZATCA E-Invoicing Logic</h3>
+        <span class="tag">T-SQL · CASE logic · window functions</span>
+        <p>Document-template selection for Saudi ZATCA e-invoicing, and charge-type rules built with window functions and fallback patterns for empty results.</p>
+      </div>
+      <div class="also-item">
+        <h3>Real Estate Portfolio Model Audit</h3>
+        <span class="tag">Power BI · DAX · time intelligence</span>
+        <p>A full DAX review across tenancy, charges, aging and collection fact tables, resolving date-table relationship conflicts and adding HTML KPI cards.</p>
+      </div>
+      <div class="also-item">
+        <h3>Financial Statements Workspace</h3>
+        <span class="tag">Power BI Service · UAT</span>
+        <p>P&amp;L, balance sheet and occupancy dashboards. Fixed date-dimension refresh failures caused by a hard-coded parameter and coordinated client UAT.</p>
+      </div>
+      <div class="also-item">
+        <h3>Interactive Power BI Visuals</h3>
+        <span class="tag">HTML · Chart.js · DAX</span>
+        <p>Animated donut charts and tab navigation rendered inside Power BI reports through HTML visuals driven by DAX measures.</p>
+      </div>
+      <div class="also-item">
+        <h3>Many-to-Many &amp; Occupancy Modeling</h3>
+        <span class="tag">Power BI · DAX · TREATAS</span>
+        <p>Bridge tables for many-to-many relationships, TREATAS for cross-table filtering, and DAX patterns for occupancy metrics.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section id="about" class="band" data-sec="about">
@@ -282,7 +332,9 @@
     <div>
       <p class="big">Results-driven Database and Power BI developer who turns complex, multi-source data into insight leaders can act on.</p>
       <p class="body-copy">Over 5+ years I’ve built, optimized, and performance-tuned SQL Server databases, delivered interactive Power BI and SSRS dashboards, and led ETL-driven migrations across multiple source systems. I’ve supported enterprise BI and financial reporting for organizations operating in 70+ countries — from global logistics at Aramex to cloud-ERP real-estate transformation in the Gulf.</p>
+      <p class="body-copy">Much of my recent work is real-estate ERP reporting on Yardi Voyager: lease financials, occupancy, aging, collections and ZATCA e-invoicing for Gulf clients. At Aramex I worked across logistics and e-commerce data.</p>
       <p class="body-copy">Comfortable across requirements gathering, stakeholder communication, and process documentation in Agile teams. Available for full-time roles and freelance Power BI &amp; data-modeling projects.</p>
+      <p class="body-copy">Languages: Arabic (native) and English (professional working proficiency).</p>
     </div>
   </div>
 </section>
@@ -296,6 +348,7 @@
         <span>T-SQL</span><span>SQL Server</span><span>Query Optimization</span>
         <span>Performance Tuning</span><span>Stored Procedures</span><span>Views &amp; Functions</span>
         <span>Data Warehousing</span><span>SSAS</span>
+        <span>CTEs</span><span>Window Functions</span>
       </div>
     </div>
     <div class="skillbox">
@@ -303,6 +356,7 @@
       <div class="chips">
         <span>Power BI</span><span>DAX</span><span>Power Query</span><span>SSRS</span>
         <span>Microsoft Fabric</span><span>R</span><span>Python</span>
+        <span>Power BI Service</span><span>Dataflows</span><span>Time Intelligence</span><span>HTML &amp; Chart.js Visuals</span>
       </div>
     </div>
     <div class="skillbox">
@@ -310,6 +364,7 @@
       <div class="chips">
         <span>ETL</span><span>SSIS</span><span>Data Modeling</span><span>Data Validation</span>
         <span>Data Governance</span><span>Azure Data Services</span><span>Docker</span><span>Git</span>
+        <span>Star Schema</span><span>Bridge Tables</span><span>Data Migration</span>
       </div>
     </div>
     <div class="skillbox">
@@ -318,6 +373,15 @@
         <span>Requirements Gathering</span><span>Stakeholder Engagement</span>
         <span>Process Documentation</span><span>Agile / Scrum</span>
         <span>Cross-functional Collaboration</span>
+        <span>UAT</span>
+      </div>
+    </div>
+    <div class="skillbox wide">
+      <h3>ERP &amp; DOMAIN</h3>
+      <div class="chips">
+        <span>Yardi Voyager</span><span>ZATCA E-Invoicing</span><span>Lease Financials</span>
+        <span>Occupancy</span><span>Aging &amp; Collections</span><span>P&amp;L &amp; Cash Flow</span>
+        <span>Retail Real Estate</span><span>Logistics</span><span>E-commerce</span>
       </div>
     </div>
   </div>
@@ -344,7 +408,7 @@
         <div>
           <h3>Senior SQL &amp; Power BI Developer</h3>
           <div class="org">Cloudy PropTech</div>
-          <p>Executive, financial, and accounting dashboards on Power BI &amp; SSRS. Built ERP-based financial reporting (revenue, forecasting, P&amp;L, cash flow) and scalable ETL pipelines with reusable stored procedures for Gulf-area real-estate organizations.</p>
+          <p>Executive, financial, and accounting dashboards on Power BI &amp; SSRS. Built ERP-based financial reporting (revenue, forecasting, P&amp;L, cash flow) and scalable ETL pipelines with reusable stored procedures for Gulf-area real-estate organizations. T-SQL reporting on Yardi Voyager lease financials, occupancy, aging and collections, plus ZATCA e-invoicing logic.</p>
         </div>
       </div>
       <div class="role">
@@ -352,7 +416,7 @@
         <div>
           <h3>Global BI &amp; SQL Developer</h3>
           <div class="org">Aramex International</div>
-          <p>Complex SQL, optimized large-scale databases, and ETL-driven migrations. Delivered dynamic Power BI &amp; SSRS reports and resolved integration issues raised by stakeholders across 70+ countries.</p>
+          <p>Complex SQL, optimized large-scale databases, and ETL-driven migrations. Delivered dynamic Power BI &amp; SSRS reports and resolved integration issues raised by stakeholders across 70+ countries. Worked across logistics and e-commerce data.</p>
         </div>
       </div>
       <div class="role">
@@ -390,6 +454,9 @@
       </a>
       <a class="ccard" href="https://www.linkedin.com/in/mredwan214/" target="_blank" rel="noopener">
         <b>LINKEDIN</b><span>/in/mredwan214</span>
+      </a>
+      <a class="ccard" href="https://github.com/Muhammad-Redwan" target="_blank" rel="noopener">
+        <b>GITHUB</b><span>/Muhammad-Redwan</span>
       </a>
     </div>
   </div>
