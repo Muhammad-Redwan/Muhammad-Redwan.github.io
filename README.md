@@ -21,6 +21,7 @@ commercial real estate across the Gulf:
 | Collections & Receivables Control | MTD collections, invoicing, aging, net outstanding | Power BI · DAX |
 | Leasing Performance & Pipeline | Lead-to-contract funnel, MOU stages, specialist ranking | Power BI · Fabric |
 | Commercial Portfolio Reporting | Occupancy, rent & service income, budget vs. actual | SQL · ETL · SSRS |
+| Lease Expiry & Holdover Tracking | Expiry banding, holdover pipeline, leases at risk | Power BI · DAX |
 
 ## A note on the data
 
@@ -39,13 +40,13 @@ portfolio entirely rather than redacted.
 ```
 .
 ├── index.html                  # the whole site
+├── collection.webp             # dashboard screenshots (1400px, WebP)
+├── leasing.webp
+├── commercial.webp
+├── expiry.webp
+├── og-image.png                # social share card (1200×630)
 ├── Muhammad-Radwan-CV.pdf      # linked from the Experience section
-├── .nojekyll                   # serve files as-is on GitHub Pages
-└── assets/
-    ├── collection.webp         # dashboard screenshots (1400px, WebP)
-    ├── leasing.webp
-    ├── commercial.webp
-    └── og-image.png            # social share card (1200×630)
+└── .nojekyll                   # serve files as-is on GitHub Pages
 ```
 
 ## Running it locally
